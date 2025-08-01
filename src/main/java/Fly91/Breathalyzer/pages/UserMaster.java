@@ -17,6 +17,14 @@ public class UserMaster {
     private final String Submit = "//span[contains(text(), 'Submit')]";
     private final String Cancel = "//span[contains(text(), 'Cancel')]";
 
+    private final String ClickUser = "(//td[contains(@class, 'm_4e7aa4ef mantine-Table-td')])[32]";
+    private final String DeactivateUser = "//span[contains(text(), 'Deactivate')]";
+
+    private final String Search = "//input[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-TextInput-input')]";
+
+
+
+
 
 
 
@@ -42,6 +50,13 @@ public class UserMaster {
         page.locator(Submit).hover();
         Thread.sleep(10000);
         page.locator(Cancel).click();
+        Thread.sleep(10000);
+
+        page.locator(ClickUser).click();
+        page.locator(DeactivateUser).click();
+        Thread.sleep(10000);
+
+        page.locator(Search).fill("Nitish");
         Thread.sleep(10000);
 
 

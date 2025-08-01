@@ -1,4 +1,5 @@
 import Fly91.Breathalyzer.pages.Login;
+import Fly91.Breathalyzer.pages.TestLogHistory;
 import Fly91.Breathalyzer.pages.UserMaster;
 import com.microsoft.playwright.*;
 import org.slf4j.Logger;
@@ -29,8 +30,11 @@ public class BreathalyzerRunner {
         Login login = new Login(page);
         login.doLogin();
 
-        UserMaster userMaster = new UserMaster(page);
-        userMaster.doUserMaster();
+        /*UserMaster userMaster = new UserMaster(page);
+        userMaster.doUserMaster();*/
+
+        TestLogHistory testLogHistory = new TestLogHistory(page);
+        testLogHistory.doTestLogHistory();
 
 
     }
