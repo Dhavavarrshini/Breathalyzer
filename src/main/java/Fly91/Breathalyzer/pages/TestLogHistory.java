@@ -23,6 +23,9 @@ public class TestLogHistory {
        private final String Confirm = "//span[contains(text(),'Confirm')]";
        private final String RerunDone = "//span[contains(text(),'Done')]";
 
+       private final String Pagination = "(//span[contains(@class,'m_8d3afb97 mantine-ActionIcon-icon')])[6]";
+
+
        private final String Search = "//input[contains(@class,'m_8fb7ebe7 mantine-Input-input mantine-TextInput-input')]";
 
        private final String AirportFilter = "//input[contains(@class,'m_8fb7ebe7 mantine-Input-input mantine-Select-input')]";
@@ -33,6 +36,7 @@ public class TestLogHistory {
        private final String PreviousmonthTO = "(//button[contains(@class,'mantine-focus-auto m_2351eeb0 mantine-DatePickerInput-calendarHeaderControl m_87cf2631 mantine-UnstyledButton-root')])[1]";
        private final String TodateSelect = "(//button[contains(@class,'mantine-focus-auto m_396ce5cb mantine-DatePickerInput-day m_87cf2631 mantine-UnstyledButton-root')])[32]";
        private final String Download = "//span[contains(text(),'Download')]";
+
 
        private final String SpecificTestLog = "(//td[contains(@class,'m_4e7aa4ef mantine-Table-td')])[4]";
 
@@ -68,12 +72,14 @@ public class TestLogHistory {
         Thread.sleep(10000);
     //    page.locator(Submit).click();
         page.locator(Cancel).click();
-        page.locator(Done).click();
+        /*page.locator(Done).click();
         page.locator(Rerun).click();
         page.locator(RerunReason).fill("Test");
-        page.locator(Confirm).click();
+        page.locator(Confirm).click();*/
     //    page.locator(Search).fill("Security");
         Thread.sleep(10000);
+
+        page.locator(Pagination).click();
 
         page.locator(AirportFilter).click();
         page.locator(AirportFilter).press("ArrowDown");
@@ -86,6 +92,7 @@ public class TestLogHistory {
         page.locator(TodateSelect).nth(1).click();*/
         page.locator(Download).hover();
         Thread.sleep(10000);
+
 
         page.locator(SpecificTestLog).click();
         Thread.sleep(10000);
