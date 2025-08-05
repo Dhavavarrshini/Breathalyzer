@@ -1,3 +1,5 @@
+package Fly91.Breathalyzer.tests;
+
 import Fly91.Breathalyzer.pages.Login;
 import Fly91.Breathalyzer.pages.Profile;
 import Fly91.Breathalyzer.pages.TestLogHistory;

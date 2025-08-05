@@ -31,10 +31,10 @@ public class TestLogHistory {
        private final String AirportFilter = "//input[contains(@class,'m_8fb7ebe7 mantine-Input-input mantine-Select-input')]";
        private final String Fromdate = "//span[contains(text(),'From Date')]";
        private final String Previousmonth = "(//button[contains(@class,'mantine-focus-auto m_2351eeb0 mantine-DatePickerInput-calendarHeaderControl m_87cf2631 mantine-UnstyledButton-root')])[1]";
-       private final String FromdateSelect = "(//button[contains(@class,'mantine-focus-auto m_396ce5cb mantine-DatePickerInput-day m_87cf2631 mantine-UnstyledButton-root')])[2]";
+       private final String FromdateSelect = "(//button[contains(text(),'1')])[1]";
        private final String Todate = "//span[contains(text(),'To Date')]";
        private final String PreviousmonthTO = "(//button[contains(@class,'mantine-focus-auto m_2351eeb0 mantine-DatePickerInput-calendarHeaderControl m_87cf2631 mantine-UnstyledButton-root')])[1]";
-       private final String TodateSelect = "(//button[contains(@class,'mantine-focus-auto m_396ce5cb mantine-DatePickerInput-day m_87cf2631 mantine-UnstyledButton-root')])[32]";
+       private final String TodateSelect = "//button[contains(text(),'31')]";
        private final String Download = "//span[contains(text(),'Download')]";
 
 
@@ -79,17 +79,17 @@ public class TestLogHistory {
     //    page.locator(Search).fill("Security");
         Thread.sleep(10000);
 
-        page.locator(Pagination).click();
+    //    page.locator(Pagination).click();
 
         page.locator(AirportFilter).click();
         page.locator(AirportFilter).press("ArrowDown");
         page.locator(AirportFilter).press("Enter");
-        /*page.locator(Fromdate).click();
+        page.locator(Fromdate).click();
         page.locator(Previousmonth).click();
-        page.locator(FromdateSelect).nth(1).click();
+        page.locator(FromdateSelect).click();
         page.locator(Todate).click();
         page.locator(PreviousmonthTO).click();
-        page.locator(TodateSelect).nth(1).click();*/
+        page.locator(TodateSelect).nth(1).click();
         page.locator(Download).hover();
         Thread.sleep(10000);
 
