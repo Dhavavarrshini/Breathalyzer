@@ -39,6 +39,7 @@ public class TestLogHistory {
 
 
        private final String SpecificTestLog = "(//td[contains(@class,'m_4e7aa4ef mantine-Table-td')])[4]";
+       private final String Back = "//button[contains(@class,'mantine-focus-auto mantine-active m_220c80f2 m_606cb269 mantine-Modal-close m_86a44da5 mantine-CloseButton-root m_87cf2631 mantine-UnstyledButton-root')]";
 
 
 
@@ -81,9 +82,9 @@ public class TestLogHistory {
 
     //    page.locator(Pagination).click();
 
-        page.locator(AirportFilter).click();
+       /* page.locator(AirportFilter).click();
         page.locator(AirportFilter).press("ArrowDown");
-        page.locator(AirportFilter).press("Enter");
+        page.locator(AirportFilter).press("Enter");*/
         page.locator(Fromdate).click();
         page.locator(Previousmonth).click();
         page.locator(FromdateSelect).click();
@@ -96,7 +97,9 @@ public class TestLogHistory {
 
         page.locator(SpecificTestLog).click();
         Thread.sleep(10000);
-        page.goBack();
+        page.locator(Back).click();
+        Thread.sleep(5000);
+    //    page.goBack();
 
 
 

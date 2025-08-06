@@ -20,6 +20,8 @@ public class UserMaster {
     private final String ClickUser = "(//td[contains(@class, 'm_4e7aa4ef mantine-Table-td')])[32]";
     private final String DeactivateUser = "//span[contains(text(), 'Deactivate')]";
 
+    private final String Back = "//button[contains(@class,'mantine-focus-auto mantine-active m_220c80f2 m_606cb269 mantine-Modal-close m_86a44da5 mantine-CloseButton-root m_87cf2631 mantine-UnstyledButton-root')]";
+
     private final String Search = "//input[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-TextInput-input')]";
 
 
@@ -53,7 +55,9 @@ public class UserMaster {
         Thread.sleep(10000);
 
         page.locator(ClickUser).click();
-        page.locator(DeactivateUser).click();
+        Thread.sleep(5000);
+        page.locator(Back).click();
+    //    page.locator(DeactivateUser).click();
         Thread.sleep(10000);
 
         page.locator(Search).fill("Nitish");

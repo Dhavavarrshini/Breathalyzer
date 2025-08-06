@@ -33,13 +33,13 @@ public class BreathalyzerRunner {
         Login login = new Login(page);
         login.doLogin();
 
-        /*UserMaster userMaster = new UserMaster(page);
-        userMaster.doUserMaster();*/
+        UserMaster userMaster = new UserMaster(page);
+        userMaster.doUserMaster();
 
-        TestLogHistory testLogHistory = new TestLogHistory(page);
+        /*TestLogHistory testLogHistory = new TestLogHistory(page);
         testLogHistory.doTestLogHistory();
 
-        /*Profile profile = new Profile(page);
+        Profile profile = new Profile(page);
         profile.doProfile();*/
 
 
