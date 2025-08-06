@@ -13,7 +13,7 @@ public class BaseTest {
     public void launchBrowser() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(false)  // set to true if you don't need UI
+                new BrowserType.LaunchOptions().setHeadless(false)
         );
     }
 

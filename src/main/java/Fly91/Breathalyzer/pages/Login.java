@@ -5,9 +5,9 @@ import com.microsoft.playwright.Page;
 public class Login {
     private Page page;
 
-     private final String EmpID = "//input[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-TextInput-input')]";
+     private final String EmpID    = "//input[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-TextInput-input')]";
      private final String Password = "//input[contains(@class, 'm_f2d85dd2 mantine-PasswordInput-innerInput')]";
-     private final String Login = "//span[contains(@class, 'm_80f1301b mantine-Button-inner')]";
+     private final String Login    = "//span[contains(@class, 'm_80f1301b mantine-Button-inner')]";
 
 
 

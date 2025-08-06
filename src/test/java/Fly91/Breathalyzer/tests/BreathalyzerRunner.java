@@ -49,5 +49,4 @@ public class BreathalyzerRunner {
         browser.close();
         playwright.close();
     }
-
 }
