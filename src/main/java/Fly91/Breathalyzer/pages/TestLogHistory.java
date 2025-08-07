@@ -12,6 +12,8 @@ public class TestLogHistory {
        private final String Shift          = "(//input[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-Select-input')])[4]";
        private final String Timings        = "(//input[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-Select-input')])[5]";
        private final String Names          = "(//input[contains(@class, 'mantine-TagsInput-inputField m_45c4369d mantine-PillsInputField-field')])[1]";
+       private final String Slider         = "(//input[contains(@class,'mantine-focus-auto m_1bfe9d39 m_8a3dbb89 mantine-Radio-radio')])[2]";
+       private final String SliderSelect   = "//div[contains(@class,'mantine-focus-auto m_c9a9a60a mantine-Slider-thumb')]";
        private final String Reason         = "//textarea[contains(@class, 'm_8fb7ebe7 mantine-Input-input mantine-Textarea-input')]";
        private final String EmailRecipients= "(//input[contains(@class, 'mantine-TagsInput-inputField m_45c4369d mantine-PillsInputField-field')])[2]";
 
@@ -56,7 +58,8 @@ public class TestLogHistory {
         page.locator(TestLogHistory).click();
         page.locator(InitiateTest).click();
         page.locator(Airport).click();
-        page.locator(Airport).press("ArrowDown");
+        page.locator(Airport).press("ArrowUp");
+        page.locator(Airport).press("ArrowUp");
         page.locator(Airport).press("Enter");
         page.locator(Department).click();
         page.locator(Department).press("ArrowDown");
@@ -67,24 +70,38 @@ public class TestLogHistory {
         page.locator(Timings).click();
         page.locator(Timings).press("ArrowDown");
         page.locator(Timings).press("Enter");
-        page.locator(Names).fill("Arjun, Meera, Rahul, Kavya, Nikhil, Ananya, Suresh, Priya, Rohan, Divya");
+        page.locator(Names).fill("Aarav, Aanya, Advait, Akira, Alisha, Aman, Amaya, Anaya, Anika, Anirudh, Anjali, Arjun, Arya, " +
+                "Ayesha, Bhavya, Chetan, Darsh, Dev, Dhruv, Dia, Divya, Eesha, Gaurav, Harsh, Isha, Ishaan, Jai, Jhanvi, Kabir, " +
+                "Kavya, Kiara, Krish, Kriti, Kunal, Laksh, Meera, Mihir, Mitali, Myra, Neha, Nikhil, Nisha, Om, Palak, Pranav, " +
+                "Priya, Rahul, Raj, Rhea, Rohan, Sakshi, Samaira, Samar, Sanvi, Shaurya, Simran, Tanvi, Tisha, Vihaan, Yash");
+        page.locator(Slider).click();
+        page.locator(SliderSelect).click();
+        page.locator(SliderSelect).press("ArrowRight");
+        page.locator(SliderSelect).press("ArrowRight");
+        page.locator(SliderSelect).press("ArrowRight");
+        page.locator(SliderSelect).press("ArrowRight");
+        page.locator(SliderSelect).press("ArrowRight");
+
+
         page.locator(Reason).fill("Test");
         page.locator(EmailRecipients).fill("dhavavarrshini.m@pentafox.in");
         Thread.sleep(10000);
-    //    page.locator(Submit).click();
-        page.locator(Cancel).click();
-        /*page.locator(Done).click();
+        page.locator(Submit).click();
+    //    page.locator(Cancel).click();
+        page.locator(Done).click();
         page.locator(Rerun).click();
         page.locator(RerunReason).fill("Test");
-        page.locator(Confirm).click();*/
+        page.locator(Confirm).click();
+        page.locator(RerunDone).click();
     //    page.locator(Search).fill("Security");
         Thread.sleep(10000);
 
-    //    page.locator(Pagination).click();
+        page.locator(Pagination).click();
 
-       /* page.locator(AirportFilter).click();
-        page.locator(AirportFilter).press("ArrowDown");
-        page.locator(AirportFilter).press("Enter");*/
+        page.locator(AirportFilter).click();
+        page.locator(AirportFilter).press("ArrowUp");
+        page.locator(AirportFilter).press("ArrowUp");
+        page.locator(AirportFilter).press("Enter");
         page.locator(Fromdate).click();
         page.locator(Previousmonth).click();
         page.locator(FromdateSelect).click();

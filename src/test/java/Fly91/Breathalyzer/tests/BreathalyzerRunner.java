@@ -36,11 +36,11 @@ public class BreathalyzerRunner {
         UserMaster userMaster = new UserMaster(page);
         userMaster.doUserMaster();
 
-        /*TestLogHistory testLogHistory = new TestLogHistory(page);
+         TestLogHistory testLogHistory = new TestLogHistory(page);
         testLogHistory.doTestLogHistory();
 
         Profile profile = new Profile(page);
-        profile.doProfile();*/
+        profile.doProfile();
 
 
     }

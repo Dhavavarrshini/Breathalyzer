@@ -43,21 +43,20 @@ public class UserMaster {
         page.locator(Role).click();
         page.locator(Role).press("ArrowDown");
         page.locator(Role).press("Enter");
-    //    page.locator(Role).selectOption("Shift Manager");
         Thread.sleep(10000);
-        page.locator(Mobile).fill("9865632573");
+        page.locator(Mobile).fill("6381214124");
         page.locator(Email).fill("dhava@gamail.com");
         page.locator(Password).fill("PENTA001");
 
-        page.locator(Submit).hover();
+        page.locator(Submit).click();
         Thread.sleep(10000);
-        page.locator(Cancel).click();
-        Thread.sleep(10000);
+    //    page.locator(Cancel).click();
+    //    Thread.sleep(10000);
 
         page.locator(ClickUser).click();
         Thread.sleep(5000);
-        page.locator(Back).click();
-    //    page.locator(Deactivate).click();
+    //    page.locator(Back).click();
+        page.locator(Deactivate).click();
         Thread.sleep(10000);
 
         page.locator(Search).fill("Nitish");
